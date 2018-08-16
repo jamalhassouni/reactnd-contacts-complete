@@ -6,3 +6,4 @@ This repo is a code-along with the first project in the [React Nanodegree progra
 2. Go into the directory where the project now lives - `cd reactnd-contacts-complete`
 3. Install the dependencies - `npm install`
 4. Start the app - `npm start`
+5. you need also to run this contacts server from here [reactnd-contacts-server.](https://github.com/udacity/reactnd-contacts-server).
