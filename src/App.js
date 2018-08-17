@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props){
    super(props)
    this.state = {
-     screen:'create', //list , create
+     screen:'list', //list , create
      contacts : []
 
    }
@@ -32,7 +32,14 @@ class App extends Component {
     return (
       <div className='app'>
         {this.state.screen === 'list' && (
-          <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts}/>
+          <ListContacts
+            onDeleteContact={this.removeContact}
+            onNavigate={() => {
+               this.setState({ screen:'create' })
+
+            }}
+            contacts={this.state.contacts}
+          />
         )}
         {this.state.screen ==='create' && (
           <CreateContact/>
